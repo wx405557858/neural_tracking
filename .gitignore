@@ -1,0 +1,5 @@
+.DS_Store
+*.mov
+*.h5
+models/test
+__pycache__
