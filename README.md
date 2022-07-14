@@ -38,7 +38,7 @@ python example_tracking_video.py
 
 ## Examples
  
-* `python example_tracking_sim.py`
+### `python example_tracking_sim.py`
 
 The interactive tracking demo. The mouse distorts (translates and rotates) the marker flow. The yellow arrow shows the marker tracking predictions from the neural network. The model can robustly track markers, even with extreme and complex interactions. The model is trained with 10x14 markers.
 
@@ -48,16 +48,28 @@ The model is also robust to marker sizes and background disturbances, due to add
 
 <img src="https://github.com/wx405557858/neural_tracking_data/blob/media/imgs/output_sim_example_disturb.gif" width=384>
 
-* `python example_tracking_sim_generic.py`
+
+User interface:
+
+- **Mouse `Click and Drag`"**: Translate the flow.
+- **Key `s` and `Drag` mouse**: Rotate the flow. (The mouse needs to be pressed while hitting `s`.)
+- **Key `c`**: Random background.
+- **Key `z`**: Change marker sizes. 
+- **Key `r`**: Reset.
+
+### `python example_tracking_sim_generic.py`
 
 The generic model is trained on variable grid patterns so that it can be invariant to different numbers of markers. The output is the flow with the same size of the input. 
 
 <img src="https://github.com/wx405557858/neural_tracking_data/blob/media/imgs/output_sim_generic_example_disturb.gif" width=384>
 
+Additional user interface:
+
+- **Key `d`**: Random marker patterns.
 
 **Note**: We suggest trying the generic model for preliminary experiments, and training your fixed model for best performance. The generic one can work on more cases directly, and the fixed one is more accurate for a certain marker pattern.
 
-* `python example_tracking_video.py`
+### `python example_tracking_video.py`
 
 The model can be transferred to real sensor data robustly, with large forces, multiple contacts, and wrinkles.
 
