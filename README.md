@@ -93,7 +93,7 @@ It takes the data pairs `(X, Y)` from `generate_img()` in `generate_data_generic
 
 * **Input**: `X` is generated similarly to the previous one. The difference is that the number of rows and columns is randomly selected from [4, 15].
 * **Output**: `Y` is the flow with the same width and height as the input image. Each point represents the horizontal and vertical displacement for each pixel. We use multiple resolutions of Y to accelerate training.
-* **Model**: The model is in the Encoder-Decoder style, which consists of Convolutional, Pooling, and Upsampling layers to generate output with the same dimensions as the input. It is defined as `build_model_ae` in train.py
+* **Model**: The model is in the Encoder-Decoder style, which consists of Convolutional, Pooling, and Upsampling layers to generate output with the same dimensions as the input. It is defined as `build_model_ae` in `train_generic.py`.
 
 **Note**: Please customize the `generate_img()` function to fit the marker patterns to your sensor.
 
